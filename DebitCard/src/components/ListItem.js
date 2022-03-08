@@ -19,6 +19,7 @@ const ListItem = ({name,description,icon,isSwitch,action,isSet}) => {
                         ios_backgroundColor={colors.switchGrey}
                         onValueChange={action}
                         value={isSet}
+                        style={{height : 20, width : 34}}
                     />
             </View>
         }
@@ -40,7 +41,8 @@ image :{
     backgroundColor : colors.blueMain
 },
 detailView : {
-    marginHorizontal : 10
+    marginHorizontal : 10,
+    width : '70%'
 },
 nameText :{
     fontSize : 14,
@@ -56,7 +58,7 @@ descriptionText:{
 switchView :{
     justifyContent : 'center',
     alignItems : 'center',
-    marginRight : 0
+    paddingRight : 10
 }
 });
 

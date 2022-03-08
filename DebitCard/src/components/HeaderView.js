@@ -12,7 +12,7 @@ const HeaderView = ({availableBalanceProp}) => {
     <View style={styles.headerContainer}>
         <View style={styles.titleView}>
             <Text style={styles.headerText}>{strings.debitCard}</Text>
-            <Image style={styles.logo} source={require('../assets/images/logo.png')}></Image>
+            <Image style={styles.logo} source={require('../assets/images/logo.png')} />
         </View>
         <View style={styles.amountView}> 
           <Text style={styles.text}>
@@ -35,7 +35,8 @@ const styles = StyleSheet.create({
   item: {
     width: '100%',
     backgroundColor: colors.blueMain, 
-    flex: 0.4
+    flex: 0.4,
+    marginVertical : 10
   },
   headerContainer:{
     flex : 1,
@@ -92,7 +93,7 @@ const styles = StyleSheet.create({
   amountText :{
     color : colors.white,
     fontSize : 24,
-    lineHeight : 24,
+    lineHeight : 26,
     marginLeft : 10,
     fontFamily:'Avenir-Medium',
     fontWeight : 'bold'

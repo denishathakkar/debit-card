@@ -91,10 +91,10 @@ const PaymentCard = () => {
 const styles = StyleSheet.create({
   hideShowView:{
     backgroundColor: colors.white, 
-    zIndex: 0, 
+    zIndex: 1, 
     height : 40 , 
     top : -40, 
-    width : '60%',
+    width : '70%',
     alignSelf : 'flex-end', 
     position : 'absolute',
     alignItems  : 'center',
@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
   },
   debitCardView : { 
     backgroundColor: colors.greenMain, 
-    zIndex: 2, 
+    zIndex: 0, 
     height : 200 , 
     top : -70, 
     borderRadius : 20,
@@ -140,7 +140,7 @@ const styles = StyleSheet.create({
   },
   nameText:{
     fontSize : 22,
-    lineHeight : 20,
+    lineHeight : 24,
     letterSpacing : 0.53,
     textAlign : 'left',
     fontWeight : "bold",

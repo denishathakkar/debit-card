@@ -19,9 +19,9 @@ const WeeklyLimitScreen = ({navigation}) => {
     setLimit(value)
   }
 
-  const onPressSave = () =>{
+  const onPressSave = () => {
     dispatch({ type: actiontypes.SET_LIMIT, payload: limit });
-    navigation.navigate(screenNames.debitCardScreen)
+    navigation.navigate(screenNames.debitCardScreen);
   }
 
   return (
@@ -66,7 +66,8 @@ const style= StyleSheet.create({
     backgroundColor: colors.blueMain,
     borderTopLeftRadius: 35,
     borderTopRightRadius: 35,
-    padding : 24
+    padding : 24,
+    marginTop : 15
   },
   headerText :{
     color: colors.white,
@@ -120,7 +121,8 @@ const style= StyleSheet.create({
     fontWeight : 'bold',
     borderBottomColor : colors.greyLightText,
     borderBottomWidth : 1,
-    fontFamily : 'AvenirNext-Bold'
+    fontFamily : 'AvenirNext-Bold',
+    marginLeft : 5
   },
   text2:{
     color: colors.greyLightText,
