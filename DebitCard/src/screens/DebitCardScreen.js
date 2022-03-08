@@ -29,7 +29,7 @@ const DebitCardScreen = ({navigation}) => {
     if(!isLimitSet){
       dispatch({ type: actiontypes.SET_LIMIT, payload: 0 });
     }
-  },[isLimitSet]);
+  },[isLimitSet,limit]);
 
   useEffect(()=>{
     if(limit > 0) {
@@ -53,7 +53,7 @@ const DebitCardScreen = ({navigation}) => {
   return (
     <MainContainer>
       <StatusBar backgroundColor={colors.primary} barStyle="light-content" />
-      <HeaderView weeklyLimitProp={limit} availableBalanceProp={5000}/>
+      <HeaderView weeklyLimitProp={limit} availableBalanceProp={availableBalance}/>
       <Body>
         <FirstCard>
           <View style={[styles.item, styles.bottomView]} >
