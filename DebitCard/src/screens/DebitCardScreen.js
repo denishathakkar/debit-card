@@ -13,14 +13,13 @@ import { Body, SecondCard, FirstCard, MainContainer } from '../styledComponents/
 const DebitCardScreen = ({navigation}) => {
   
   const spendingLimit = useSelector(state => state.limit);
+  const userData = useSelector(state => state.data);
   const [limit , setLimit] = useState(spendingLimit);
   const dispatch = useDispatch();
   const [isLimitSet , setIsLimitSet] = useState(false);
   const [description , setDescription] = useState(isLimitSet ? strings.weeklySetDescription + 'S$ ' + limit : strings.weeklyUnsetDescription)
-  const availableBalance = 5000;
-  const spentMoney = 345;
-
-  console.log("spending limit", limit, spendingLimit, isLimitSet)
+ 
+  const availableBalance = userData.availableBalance;
 
   useEffect(()=>{
     setDescription((isLimitSet ? strings.weeklySetDescription + 'S$ ' + limit : strings.weeklyUnsetDescription))
@@ -85,7 +84,8 @@ const styles = StyleSheet.create({
   },
   progressDetail :{
     flexDirection : 'row',
-    paddingHorizontal : '10%'
+    paddingHorizontal : '10%',
+    marginTop  : 10
   },
   debitCardSpendingLimit :{
     flex : 0.5,

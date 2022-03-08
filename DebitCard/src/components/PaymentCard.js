@@ -1,17 +1,18 @@
 import React, {useEffect,useState} from 'react';
 import {View, Text, StyleSheet, Image, TouchableOpacity, TextInput} from 'react-native';
+import { useSelector } from 'react-redux';
 import colors from '../constants/colors';
 import strings from '../constants/strings';
-import { HideView } from '../styledComponents/styleComponents';
 
 const PaymentCard = () => {
-
+  const userData = useSelector(state => state.data);
   const [isHidden,setIsHidden] = useState(true)
-  const [name] = ["Denisha Thakkar"];
-  const cardValue = '1234553535435431';
-  let cvvValue = '123';
+  let name = userData.name;
+  let cardValue = userData.cardNumber;
+  let cvvValue = userData.cvv;
+  let expiry= userData.expiry;
+
   const [cardNumber, setCardNumber] = useState(cardValue);
-  const [expiry, setExpiry] = useState('12/21');
   const [cvv, setCVV] = useState(cvvValue);
 
   const handleOnChangeText = (number) => {
