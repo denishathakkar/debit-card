@@ -1,8 +1,7 @@
 import  actiontypes  from '../actions/actiontypes';
+import customData from '../../data.json'
 
-
-
-  const reducer = (state = {limit : 0}, action) => {
+  const reducer = (state = {limit : 0, data: customData.data}, action) => {
     console.log("reducer", state, action)
     switch(action.type) {
       

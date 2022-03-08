@@ -1,0 +1,10 @@
+{
+    "data" : {
+        "name" : "Mark Henry",
+        "cardNumber" : "5647341124132020",
+        "expiry" : "12/20",
+        "cvv" : "456",
+        "availableBalance" : "5000",
+        "spentLimit"  : "500"
+    }
+}   
