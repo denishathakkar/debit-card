@@ -1,6 +1,6 @@
 import actiontypes from './actiontypes';
 
-export const getLimit = url => {
+export const getLimit = () => {
   return {
     type: actiontypes.GET_LIMIT,
   };
